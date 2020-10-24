@@ -151,6 +151,8 @@ MonoBehaviour:
   animator_color: {fileID: 8953837332274192492}
   handR: {fileID: 1269304619116422304}
   handL: {fileID: 1782634811198895326}
+  gl: {fileID: 0}
+  Damage: {fileID: 8300000, guid: 310139ed63dded0409e7ec660c938e06, type: 3}
 --- !u!82 &8436833782352738147
 AudioSource:
   m_ObjectHideFlags: 0

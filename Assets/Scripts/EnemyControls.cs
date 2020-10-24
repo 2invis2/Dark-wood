@@ -10,8 +10,10 @@ public class EnemyControls : MonoBehaviour
 	private bool isActive;
 	private bool offSight;
 	private Transform target;
-	public Animator animator;
-
+    public Animator animator;
+    public AudioClip activate;
+    private AudioSource audio;
+    
 	private CharState State
 	{
 		get { return (CharState)animator.GetInteger("State"); }
@@ -20,6 +22,7 @@ public class EnemyControls : MonoBehaviour
 	
 	void Awake()
 	{
+        audio = GetComponent<AudioSource>();
 		isActive = false;
 		offSight = true;
 		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -51,6 +54,12 @@ public class EnemyControls : MonoBehaviour
 	
 	public void OnView(float distance)
 	{
+        if (!isActive)
+        {
+
+
+            audio.PlayOneShot(activate);
+        }
 		isActive = true;
 		offSight = false;
 	}

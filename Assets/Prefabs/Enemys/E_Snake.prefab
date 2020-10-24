@@ -187,3 +187,4 @@ MonoBehaviour:
   speed: 2
   chaseDistance: 10
   animator: {fileID: 0}
+  activate: {fileID: 8300000, guid: 8f42be2fbba6b8644ad132627b330074, type: 3}
