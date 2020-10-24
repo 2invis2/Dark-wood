@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour
     public float speed = 1;
 	public int sanity = 5;
     private Rigidbody2D rb;
-
+	public float compassAngle;
     public GameObject Ui;
     public GameObject lantern;
     public GameObject Sprite_black;
@@ -43,6 +43,8 @@ public class PlayerControls : MonoBehaviour
     {
         Moving();
 		Minimap();
+		Compass();
+		Debug.Log(compassAngle);
     }
 	
 	void FixedUpdate()
@@ -125,9 +127,8 @@ public class PlayerControls : MonoBehaviour
 	public void Compass()
 	{
 		GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
-		Vector2 exitPoint =  new Vector2(GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.x, GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.y);
-		Vector2 playerPoint = new Vector2(transform.position.x, transform.position.y);
-		Debug.Log(Vector2.Angle(exitPoint, playerPoint));
-	
+		Vector2 exitPoint =  new Vector2(GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.x - transform.position.x, GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.y - transform.position.y);
+		compassAngle = (Vector2.Angle(exitPoint, Vector2.down) * exitPoint.x/Mathf.Abs(exitPoint.x))+180;
+		GameObject.FindGameObjectWithTag("Compass").GetComponent<CompassRotate>().ChangeDirection(compassAngle);	
 	}
 }

@@ -11,6 +11,7 @@ TagManager:
   - MinimapCamera
   - Minimap
   - Exit
+  - Compass
   layers:
   - Default
   - TransparentFX
