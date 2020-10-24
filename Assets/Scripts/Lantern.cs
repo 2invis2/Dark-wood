@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Lantern : MonoBehaviour
 {
 
     private float lightingRange = 1.0f;
@@ -14,18 +12,9 @@ public class NewBehaviourScript : MonoBehaviour
         collider = GetComponent<PolygonCollider2D>();
     }
 
-    private void OnTriggerEnter2D(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+        float distance = Vector3.Magnitude(transform.position - other.gameObject.transform.position);
+        other.gameObject.SendMessage("OnView", distance);
     }
 }
