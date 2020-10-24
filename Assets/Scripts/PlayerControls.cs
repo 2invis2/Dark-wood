@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public float speed = 1;
+	public int sanity = 5;
     private Rigidbody2D rb;
 
     public GameObject lantern;
     public GameObject Sprite_black;
     public GameObject Sprite_color;
+	public GameObject SanityMeter;
     private SpriteRenderer black_render;
     private SpriteRenderer color_renderer;
 
@@ -84,6 +86,8 @@ public class PlayerControls : MonoBehaviour
 	public void CaughtByEnemy()
 	{
 		Debug.Log("Sanity decreased");
+		sanity--;
+		SanityMeter.SendMessage("UpdateSanity", sanity);
+		
 	}
-	
 }
