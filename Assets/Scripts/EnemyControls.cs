@@ -55,7 +55,7 @@ public class EnemyControls : MonoBehaviour
 	
 	public void CheckStop(float maxDist)
 	{
-		Debug.Log("вне зрения " +offSight + "активен " + isActive + " расстояние " + distanceToPlayer);
+		//Debug.Log("вне зрения " +offSight + "активен " + isActive + " расстояние " + distanceToPlayer);
 		if (maxDist < distanceToPlayer)
 		{
 			isActive = false;
