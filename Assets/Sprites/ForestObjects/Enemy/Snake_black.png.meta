@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: e0148d7296381784baa0808ab9833acf
+guid: 5c6263b6efa35174f93c7d6dd79c39bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7766637424382265647
-    second: Snake_0
+      213: 5990517970162134164
+    second: Snake_black_0
   - first:
-      213: 4149926256698089342
-    second: Snake_1
+      213: 4615610145083132011
+    second: Snake_black_1
   - first:
-      213: 2808559760237250731
-    second: Snake_2
+      213: 6488543660905240024
+    second: Snake_black_2
   - first:
-      213: -4538063122725819375
-    second: Snake_3
+      213: -6425629878112514596
+    second: Snake_black_3
   - first:
-      213: -2636964912942924883
-    second: Snake_4
+      213: -8373732571814352370
+    second: Snake_black_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,11 +102,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snake_0
+      name: Snake_black_0
       rect:
         serializedVersion: 2
         x: 213
-        y: 4482
+        y: 4472
         width: 3022
         height: 910
       alignment: 0
@@ -116,18 +116,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d6b074796c573490800000000000000
-      internalID: -7766637424382265647
+      spriteID: 49cab10da58922350800000000000000
+      internalID: 5990517970162134164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_1
+      name: Snake_black_1
       rect:
         serializedVersion: 2
         x: 230
-        y: 3442
+        y: 3430
         width: 3022
         height: 913
       alignment: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f5e8671ff779930800000000000000
-      internalID: 4149926256698089342
+      spriteID: b688e5fe8f0fd0040800000000000000
+      internalID: 4615610145083132011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_2
+      name: Snake_black_2
       rect:
         serializedVersion: 2
         x: 213
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba8c567b8320af620800000000000000
-      internalID: 2808559760237250731
+      spriteID: 8d59ed1f410fb0a50800000000000000
+      internalID: 6488543660905240024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_3
+      name: Snake_black_3
       rect:
         serializedVersion: 2
         x: 213
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11ca0a132af8501c0800000000000000
-      internalID: -4538063122725819375
+      spriteID: cdd87f89ba393d6a0800000000000000
+      internalID: -6425629878112514596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_4
+      name: Snake_black_4
       rect:
         serializedVersion: 2
         x: 213
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab3ed6026e976bd0800000000000000
-      internalID: -2636964912942924883
+      spriteID: e0a23e487968acb80800000000000000
+      internalID: -8373732571814352370
       vertices: []
       indices: 
       edges: []

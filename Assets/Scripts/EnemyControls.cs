@@ -10,30 +10,38 @@ public class EnemyControls : MonoBehaviour
 	private bool isActive;
 	private bool offSight;
 	private Transform target;
-	
-	// Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Animator animator;
+
+	private CharState State
+	{
+		get { return (CharState)animator.GetInteger("State"); }
+		set { animator.SetInteger("State", (int)value); }
+	}
 	
 	void Awake()
 	{
 		isActive = false;
 		offSight = true;
 		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+		animator = GetComponentInChildren<Animator>();
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 	
 	void FixedUpdate()
     {
 		if (isActive)
+		{
 			moveToPlayer();
+			if (!offSight)
+			{
+				State = CharState.Move;
+			}
+			else
+            {
+				State = CharState.MoveShadow;
+			}
+
+		}
+
 		distanceToPlayer = Vector3.Magnitude(transform.position - target.position);
 		if (offSight)
 			CheckStop(chaseDistance); 
@@ -59,6 +67,7 @@ public class EnemyControls : MonoBehaviour
 		if (maxDist < distanceToPlayer)
 		{
 			isActive = false;
+			State = CharState.Shadow;
 		}
 	}
 	
@@ -80,7 +89,11 @@ public class EnemyControls : MonoBehaviour
 	{
 		Destroy(this.gameObject);
 	}
-	
-	
-	
+}
+
+public enum CharState
+{
+	Shadow,
+	Move,
+	MoveShadow
 }
