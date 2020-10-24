@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LootPickUp : MonoBehaviour
 {
+    public AudioClip pickUp;
+    private AudioSource audio;
     public string itemName;
     // Start is called before the first frame update
     void Start()
@@ -14,14 +16,19 @@ public class LootPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-	
-	void OnTriggerEnter2D(Collider2D col)
+    private void OnEnable()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             Debug.Log(itemName + " collected");
+            audio.PlayOneShot(pickUp);
             GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);
 			if (itemName == "Compass")
