@@ -67,6 +67,19 @@ public class EnemyControls : MonoBehaviour
 		transform.position = Vector2.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
 	}
 	
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		if (collision.collider.gameObject.tag == "Player")
+			{
+				collision.collider.gameObject.SendMessage("CaughtByEnemy");
+				JobDone();
+			}
+	}
+	
+	public void JobDone()
+	{
+		Destroy(this.gameObject);
+	}
 	
 	
 	

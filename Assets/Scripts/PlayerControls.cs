@@ -47,4 +47,10 @@ public class PlayerControls : MonoBehaviour
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         lantern.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
     }
+	
+	public void CaughtByEnemy()
+	{
+		Debug.Log("Sanity decreased");
+	}
+	
 }
