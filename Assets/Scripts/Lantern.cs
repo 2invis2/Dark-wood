@@ -25,6 +25,9 @@ public class Lantern : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        other.gameObject.SendMessage("OffView");
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.SendMessage("OffView");
+        }
     }
 }
