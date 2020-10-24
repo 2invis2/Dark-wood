@@ -18,11 +18,13 @@ public class CompassRotate : MonoBehaviour
 	
 	public void ChangeDirection(float angle)
 	{
-		transform.eulerAngles = new Vector3 (0, 0, angle);
+		if (timer > 2)
+			transform.eulerAngles = new Vector3 (0, 0, angle);
 	}
 	
 	public void Anomaly()
 	{
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z + Random.Range(-30.0f, 30.0f));
+		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z + Random.Range(-5.0f, 5.0f));
+		timer = 0;
 	}
 }
