@@ -5,7 +5,7 @@ using UnityEngine;
 public class LootPickUp : MonoBehaviour
 {
     public AudioClip pickUp;
-    private AudioSource audio;
+    public AudioSource audio;
     public string itemName;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,7 @@ public class LootPickUp : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Debug.Log(itemName + " collected");
+            col.gameObject.GetComponent<AudioSource>().PlayOneShot(pickUp);
             audio.PlayOneShot(pickUp);
             GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);

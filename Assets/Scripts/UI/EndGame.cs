@@ -8,14 +8,22 @@ public class EndGame : MonoBehaviour
 {
     public GameObject endGame;
     public Text cause;
-
+    public AudioSource audio;
+    public AudioClip death;
     private void Awake()
     {
+        
+    }
+    private void OnEnable()
+    {
+        audio = GetComponent<AudioSource>();
         endGame.SetActive(false);
         Debug.Log(endGame.activeSelf);
     }
     public void GameOver(string causeGameOver)
     {
+        audio.PlayOneShot(death);
+
         Debug.Log("GameOver");
 
         GameObject.Find("Lantern").SetActive(false);
