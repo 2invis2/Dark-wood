@@ -62,10 +62,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1260437661150685175, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3233457492693186335, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4909953581905101265, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
         type: 3}
       propertyPath: m_Name
       value: FoN_Tree_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909953581905101265, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862099488251297224, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6070727140858538148, guid: c0bae8cc7149d2e40a0c7b076164a4ff,
         type: 3}
