@@ -17,4 +17,9 @@ public class Lantern : MonoBehaviour
         float distance = Vector3.Magnitude(transform.position - other.gameObject.transform.position);
         other.gameObject.SendMessage("OnView", distance);
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        other.gameObject.SendMessage("OffView");
+    }
 }
