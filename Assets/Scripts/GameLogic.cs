@@ -24,6 +24,10 @@ public class GameLogic: MonoBehaviour
     public List<Image> questImages;
 
     public GameObject uIQuestList;
+
+    public GameObject window;
+    public float damageTime;
+    public float damageCooldown = 0.7f;
     public void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -32,14 +36,15 @@ public class GameLogic: MonoBehaviour
         InitDictionary();
         TestInit();
         InitQuestList();
-        
-
+        //window = GameObject.Find("BlackWindow");
+        damageTime = Time.time;
 
     }
 
 
     public void Update()
     {
+        BlackWindow();
         if (Input.GetButtonDown("QuestList"))
         {
             Debug.Log(uIQuestList.active);
@@ -163,7 +168,19 @@ public class GameLogic: MonoBehaviour
 
     }
 
+    public  void BlackWindow()
+    {
+        if(Time.time - damageTime <= damageCooldown)
+        {
+            window.GetComponent<Image>().color = new Color(0,0,0,1- ((Time.time - damageTime)/ damageCooldown));
+        }
+        else
+        {
+            window.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        }
 
+
+    }
     public static bool CollectItem(string itemName)
     {
         try

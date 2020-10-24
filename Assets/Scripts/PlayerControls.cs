@@ -17,11 +17,15 @@ public class PlayerControls : MonoBehaviour
     private SpriteRenderer color_renderer;
 	private bool MapEnabled;
 
+    public Animator animator_black;
+    public Animator animator_color;
+
     public GameObject handR;
     public GameObject handL;
 
     private AudioSource audio;
-
+    public GameLogic gl;
+    public AudioClip Damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,8 @@ public class PlayerControls : MonoBehaviour
 
     private void OnEnable()
     {
+       
+        SanityMeter.SendMessage("UpdateSanity", sanity);
         audio = GetComponent<AudioSource>();
         audio.Play();
 		rb = GetComponent<Rigidbody2D>();
@@ -62,6 +68,8 @@ public class PlayerControls : MonoBehaviour
 
         if((axisX !=0) || (axisY != 0))
         {
+            animator_black.SetFloat("Walk", 1.0f);
+            animator_color.SetFloat("Walk", 1.0f);
             if (!audio.isPlaying)
             {
                 audio.Play();
@@ -69,6 +77,8 @@ public class PlayerControls : MonoBehaviour
         }
         else
         {
+            animator_black.SetFloat("Walk", 0f);
+            animator_color.SetFloat("Walk", 0f);
             audio.Pause();
         }
     }
@@ -108,8 +118,11 @@ public class PlayerControls : MonoBehaviour
 	
 	public void CaughtByEnemy()
 	{
+
+        audio.PlayOneShot(Damage);
 		Debug.Log("Sanity decreased");
-		sanity--;
+        sanity--;
+        gl.damageTime = Time.time;
 		SanityMeter.SendMessage("UpdateSanity", sanity);
 		if (sanity == 0) Ui.GetComponent<EndGame>().GameOver("Sanity is gone");
 		

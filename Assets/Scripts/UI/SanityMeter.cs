@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class SanityMeter : MonoBehaviour
 {
-	public Text sanityText;
+    public Text sanityText;
+    public Image image;
+    public int maxSanity;
+    public List<Sprite> imageList = new List<Sprite>();
 	public void UpdateSanity(int lvl)
 	{
-		sanityText.text = "Sanity: " + lvl;
+        image.sprite = imageList[maxSanity - lvl];
+		sanityText.text = "Рассудок: " + lvl;
 	}
 }
