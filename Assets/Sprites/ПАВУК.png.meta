@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f53157db95d72b04daf48998e9e91f35
+guid: 1aa1a597271a7ed46be51f5735e6ded5
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -13,6 +13,72 @@ TextureImporter:
     second: "\u041F\u0410\u0412\u0423\u041A_2"
   - first:
       213: -8357198595842117912
+    second: "\u041F\u0410\u0412\u0423\u041A_3"
+  - first:
+      213: 8744637071493350753
+    second: "\u041F\u0410\u0412\u0423\u041A_4"
+  - first:
+      213: -5040761328689855272
+    second: "\u041F\u0410\u0412\u0423\u041A_5"
+  - first:
+      213: 6913427426363258804
+    second: "\u041F\u0410\u0412\u0423\u041A_6"
+  - first:
+      213: 2073004979393221047
+    second: "\u041F\u0410\u0412\u0423\u041A_7"
+  - first:
+      213: -7181898674272724173
+    second: "\u041F\u0410\u0412\u0423\u041A_8"
+  - first:
+      213: 8026467585898177358
+    second: "\u041F\u0410\u0412\u0423\u041A_9"
+  - first:
+      213: 44579269264752779
+    second: "\u041F\u0410\u0412\u0423\u041A_10"
+  - first:
+      213: 2626342344026944614
+    second: "\u041F\u0410\u0412\u0423\u041A_11"
+  - first:
+      213: -6832081364565322596
+    second: "\u041F\u0410\u0412\u0423\u041A_12"
+  - first:
+      213: 3864827780846654259
+    second: "\u041F\u0410\u0412\u0423\u041A_13"
+  - first:
+      213: -6386396675910574779
+    second: "\u041F\u0410\u0412\u0423\u041A_14"
+  - first:
+      213: 1626906169239561250
+    second: "\u041F\u0410\u0412\u0423\u041A_15"
+  - first:
+      213: 1760195377772044212
+    second: "\u041F\u0410\u0412\u0423\u041A_16"
+  - first:
+      213: 8674869976798289820
+    second: "\u041F\u0410\u0412\u0423\u041A_17"
+  - first:
+      213: 7693937362344979631
+    second: "\u041F\u0410\u0412\u0423\u041A_18"
+  - first:
+      213: -1484427495505965518
+    second: "\u041F\u0410\u0412\u0423\u041A_19"
+  - first:
+      213: -3865245194672259957
+    second: "\u041F\u0410\u0412\u0423\u041A_20"
+  - first:
+      213: -6638993563244061139
+    second: "\u041F\u0410\u0412\u0423\u041A_21"
+  - first:
+      213: 4946622535889411760
+    second: "\u041F\u0410\u0412\u0423\u041A_0"
+  - first:
+      213: -2932482701827214321
+    second: "\u041F\u0410\u0412\u0423\u041A_1"
+  - first:
+      213: -4532454675376638613
+    second: "\u041F\u0410\u0412\u0423\u041A_2"
+  - first:
+      213: 7547396812286151062
     second: "\u041F\u0410\u0412\u0423\u041A_3"
   externalObjects: {}
   serializedVersion: 11
@@ -53,11 +119,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,6 +185,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -126,12 +204,12 @@ TextureImporter:
       name: "\u041F\u0410\u0412\u0423\u041A_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1528.75
-        height: 1000
+        x: 34
+        y: 98
+        width: 1445
+        height: 775
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,36 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u041F\u0410\u0412\u0423\u041A_1"
-      rect:
-        serializedVersion: 2
-        x: 1528
-        y: 0
-        width: 1528.75
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24ea328396f539b70800000000000000
-      internalID: 8904565793759669826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "\u041F\u0410\u0412\u0423\u041A_2"
       rect:
         serializedVersion: 2
-        x: 3056
-        y: 0
-        width: 1528.75
-        height: 1000
+        x: 1578
+        y: 73
+        width: 1364
+        height: 764
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +246,12 @@ TextureImporter:
       name: "\u041F\u0410\u0412\u0423\u041A_3"
       rect:
         serializedVersion: 2
-        x: 4584
-        y: 0
-        width: 1528.75
-        height: 1000
+        x: 3034
+        y: 69
+        width: 1443
+        height: 732
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,6 +259,27 @@ TextureImporter:
       bones: []
       spriteID: 8eeef69c724450c80800000000000000
       internalID: -8357198595842117912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u041F\u0410\u0412\u0423\u041A_4"
+      rect:
+        serializedVersion: 2
+        x: 4510
+        y: 69
+        width: 1541
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165c210e5113b5970800000000000000
+      internalID: 8744637071493350753
       vertices: []
       indices: 
       edges: []
