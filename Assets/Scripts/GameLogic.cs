@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public  class GameLogic: MonoBehaviour
+public class GameLogic: MonoBehaviour
 {
     private static Dictionary<string, bool> itemsToCollect = new Dictionary<string, bool>();
     public static Dictionary<string, bool> GetItemsCollect() { return itemsToCollect; }
@@ -64,6 +64,11 @@ public  class GameLogic: MonoBehaviour
     public static void FinishLevel()
     {
         Debug.Log("finish");
+    }
+
+    public static void FailedLevel()
+    {
+
     }
 
 

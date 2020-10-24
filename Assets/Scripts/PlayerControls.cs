@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
 	public int sanity = 5;
     private Rigidbody2D rb;
 
+    public GameObject Ui;
     public GameObject lantern;
     public GameObject Sprite_black;
     public GameObject Sprite_color;
@@ -105,8 +106,7 @@ rb = GetComponent<Rigidbody2D>();
 		Debug.Log("Sanity decreased");
 		sanity--;
 		SanityMeter.SendMessage("UpdateSanity", sanity);
-		//if (sanity == 0)
-		//	GameLogic.FailedLevel("Sanity is gone");
+		if (sanity == 0) Ui.GetComponent<EndGame>().GameOver("Sanity is gone");
 		
 	}
 }

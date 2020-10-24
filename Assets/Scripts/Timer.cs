@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     public float time = 300.0f;
     public Text timerText;
+    public GameObject Ui;
 
     void Start()
     {
@@ -17,5 +18,12 @@ public class Timer : MonoBehaviour
     {
         time -= Time.deltaTime;
         timerText.text = Mathf.Round(time).ToString();
+
+        isOver();
+    }
+
+    private void isOver()
+    {
+        if(Mathf.Round(time) <= 0) Ui.GetComponent<EndGame>().GameOver("Time is over");
     }
 }
