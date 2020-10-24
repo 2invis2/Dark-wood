@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemyControls : MonoBehaviour
 {
     public float speed = 1;
+	public float chaseDistance = 4;
+	private float distanceToPlayer;
 	private bool isActive;
+	private bool offSight;
 	private Transform target;
 	
 	// Start is called before the first frame update
@@ -17,6 +20,7 @@ public class EnemyControls : MonoBehaviour
 	void Awake()
 	{
 		isActive = false;
+		offSight = true;
 		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	}
 
@@ -30,6 +34,9 @@ public class EnemyControls : MonoBehaviour
     {
 		if (isActive)
 			moveToPlayer();
+		distanceToPlayer = Vector3.Magnitude(transform.position - target.position);
+		if (offSight)
+			CheckStop(chaseDistance); 
     }
 	
 	
@@ -37,11 +44,19 @@ public class EnemyControls : MonoBehaviour
 	public void OnView(float distance)
 	{
 		isActive = true;
+		offSight = false;
 	}
 	
-	void OnTriggerExit2D(Collider2D col)
+	public void OffView()
 	{
-		if (col.tag == "Player")
+		offSight = true;
+	}
+	
+	
+	public void CheckStop(float maxDist)
+	{
+		Debug.Log("вне зрения " +offSight + "активен " + isActive + " расстояние " + distanceToPlayer);
+		if (maxDist < distanceToPlayer)
 		{
 			isActive = false;
 		}
