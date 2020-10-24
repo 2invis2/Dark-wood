@@ -64,7 +64,9 @@ public class PlayerControls : MonoBehaviour
     {
         float axisX = Input.GetAxis("Horizontal");
         float axisY = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(axisX * speed, axisY * speed);
+		Vector2 move = new Vector2(axisX, axisY);
+		move.Normalize();
+        rb.velocity = new Vector2(move.x*speed, move.y*speed);
 
         if((axisX !=0) || (axisY != 0))
         {
