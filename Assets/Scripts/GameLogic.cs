@@ -21,7 +21,7 @@ public  class GameLogic: MonoBehaviour
 
         List<string> items = new List<string>();
         items.Add("Keys");
-        items.Add("Сompass");
+        items.Add("Compass");
         InitItemList(items);
 
     }
