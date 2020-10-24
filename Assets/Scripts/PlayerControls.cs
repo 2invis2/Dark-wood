@@ -31,7 +31,7 @@ public class PlayerControls : MonoBehaviour
 	{
 		float axisX = Input.GetAxis ("Horizontal");
 		float axisY = Input.GetAxis ("Vertical");
-		rb.velocity = new Vector2 (axisX*speed, axisY*speed);	
+		rb.velocity = new Vector2 (axisX*speed*Time.deltaTime, axisY*speed*Time.deltaTime);	
 	}
 	
 	public void LanternRotation()
