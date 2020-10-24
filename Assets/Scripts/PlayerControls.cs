@@ -7,22 +7,32 @@ public class PlayerControls : MonoBehaviour
     public float speed = 1;
     private Rigidbody2D rb;
     public GameObject lantern;
+    public GameObject Sprite_black;
+    public GameObject Sprite_color;
+    private SpriteRenderer black_render;
+    private SpriteRenderer color_renderer;
 	
 	// Start is called before the first frame update
     void Start()
     {
-		rb = GetComponent <Rigidbody2D> ();
+		//rb = GetComponent <Rigidbody2D> ();
     }
 
+    private void OnEnable()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        black_render = Sprite_black.GetComponent<SpriteRenderer>();
+        color_renderer = Sprite_color.GetComponent<SpriteRenderer>();
+    }
     // Update is called once per frame
     void Update()
     {
-		
+        Moving();
     }
 	
 	void FixedUpdate()
 	{
-		Moving();
+		
         LanternRotation();
 
     }
@@ -31,7 +41,7 @@ public class PlayerControls : MonoBehaviour
 	{
 		float axisX = Input.GetAxis ("Horizontal");
 		float axisY = Input.GetAxis ("Vertical");
-		rb.velocity = new Vector2 (axisX*speed*Time.deltaTime, axisY*speed*Time.deltaTime);	
+		rb.velocity = new Vector2 (axisX*speed, axisY*speed);	
 	}
 	
 	public void LanternRotation()
@@ -45,6 +55,16 @@ public class PlayerControls : MonoBehaviour
         diff.Normalize();
 
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        if(Mathf.Abs(rot_z) > 90)
+        {
+            black_render.flipX = true;
+            color_renderer.flipX = true;
+        }
+        else
+        {
+            black_render.flipX = false;
+            color_renderer.flipX = false;
+        }
         lantern.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
     }
 	
