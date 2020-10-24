@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public float speed = 1;
-	private Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public GameObject lantern;
 	
 	// Start is called before the first frame update
     void Start()
@@ -22,8 +23,9 @@ public class PlayerControls : MonoBehaviour
 	void FixedUpdate()
 	{
 		Moving();
-		Flashlight();
-	}
+        LanternRotation();
+
+    }
 	
 	public void Moving()
 	{
@@ -32,11 +34,17 @@ public class PlayerControls : MonoBehaviour
 		rb.velocity = new Vector2 (axisX*speed, axisY*speed);	
 	}
 	
-	public void Flashlight()
+	public void LanternRotation()
 	{
-		Vector3 mouse = Input.mousePosition;
+		/*
+          Vector3 mouse = Input.mousePosition;
 		Vector3 lightPoint = Camera.main.ScreenToWorldPoint(mouse);
 		Debug.Log(lightPoint);
+        */
+        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        diff.Normalize();
 
-	}
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        lantern.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+    }
 }
