@@ -24,6 +24,8 @@ public class LootPickUp : MonoBehaviour
             Debug.Log(itemName + " collected");
             GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);
+			if (itemName == "Compass")
+				GameObject.FindGameObjectWithTag("Compass").GetComponent<Transform>().position = new Vector3(100, 100, 0);
         }
 			
 	}
