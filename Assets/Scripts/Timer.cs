@@ -16,6 +16,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         time -= Time.deltaTime;
-        timerText.text = System.Math.Round(time, 2).ToString();
+        timerText.text = Mathf.Round(time).ToString();
     }
 }
