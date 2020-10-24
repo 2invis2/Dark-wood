@@ -11946,6 +11946,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108679822427195151, guid: 203b5cdab1666b74e9bf818842106803,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108679822629631605, guid: 203b5cdab1666b74e9bf818842106803,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108679822629631607, guid: 203b5cdab1666b74e9bf818842106803,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.5529412
+      objectReference: {fileID: 0}
     - target: {fileID: 1108679823773722775, guid: 203b5cdab1666b74e9bf818842106803,
         type: 3}
       propertyPath: m_Name
@@ -12077,6 +12092,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1145651534, guid: a906c37bbfe1ba248be0e9772845bf08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145651537, guid: a906c37bbfe1ba248be0e9772845bf08, type: 3}
+      propertyPath: orthographic size
+      value: 28.68799
+      objectReference: {fileID: 0}
     - target: {fileID: 1673194119, guid: a906c37bbfe1ba248be0e9772845bf08, type: 3}
       propertyPath: m_IsActive
       value: 0
