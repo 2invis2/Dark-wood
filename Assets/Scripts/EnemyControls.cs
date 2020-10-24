@@ -12,21 +12,16 @@ public class EnemyControls : MonoBehaviour
 	private Transform target;
     public Animator animator;
     public AudioClip activate;
-    private AudioSource audio;
-    
-	private CharState State
-	{
-		get { return (CharState)animator.GetInteger("State"); }
-		set { animator.SetInteger("State", (int)value); }
-	}
+    private AudioSource audio;	
 	
-	void Awake()
+	void OnEnable()
 	{
         audio = GetComponent<AudioSource>();
 		isActive = false;
 		offSight = true;
 		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		animator = GetComponentInChildren<Animator>();
+
 	}
 	
 	void FixedUpdate()
@@ -36,11 +31,11 @@ public class EnemyControls : MonoBehaviour
 			moveToPlayer();
 			if (!offSight)
 			{
-				State = CharState.Move;
+				animator.SetInteger("State", (int)CharState.Move);
 			}
 			else
             {
-				State = CharState.MoveShadow;
+				animator.SetInteger("State", (int)CharState.MoveShadow);
 			}
 
 		}
@@ -56,8 +51,6 @@ public class EnemyControls : MonoBehaviour
 	{
         if (!isActive)
         {
-
-
             audio.PlayOneShot(activate);
         }
 		isActive = true;
@@ -76,7 +69,7 @@ public class EnemyControls : MonoBehaviour
 		if (maxDist < distanceToPlayer)
 		{
 			isActive = false;
-			State = CharState.Shadow;
+			animator.SetInteger("State", (int)CharState.Shadow);
 		}
 	}
 	
