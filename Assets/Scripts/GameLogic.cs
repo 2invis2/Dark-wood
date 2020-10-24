@@ -4,8 +4,8 @@ using UnityEngine;
 
 public  class GameLogic: MonoBehaviour
 {
-    private static Dictionary<string, bool> itemsCollect = new Dictionary<string, bool>();
-    public static Dictionary<string, bool> GetItemsCollect() { return itemsCollect; }
+    private static Dictionary<string, bool> itemsToCollect = new Dictionary<string, bool>();
+    public static Dictionary<string, bool> GetItemsCollect() { return itemsToCollect; }
 
     private static bool isExitAvilable = false;
 
@@ -15,12 +15,14 @@ public  class GameLogic: MonoBehaviour
         TestInit();
     }
 
+    //Временная ручная инициализация списка предметов
     public static void TestInit()
     {
-        //Временная ручная инициализация списка предметов
+
         List<string> items = new List<string>();
-        //items.Add("Keys");
+        items.Add("Keys");
         InitItemList(items);
+
     }
 
     public static void TryToEscape()
@@ -33,7 +35,7 @@ public  class GameLogic: MonoBehaviour
     private static bool isAllItermsCollect()
     {
         bool isTrue = true;
-        foreach (KeyValuePair<string, bool> item in itemsCollect)
+        foreach (KeyValuePair<string, bool> item in itemsToCollect)
         {
             if (!item.Value)
             {
@@ -46,9 +48,11 @@ public  class GameLogic: MonoBehaviour
     {
         foreach (string item in items)
         {
-            itemsCollect.Add(item, false);
+            itemsToCollect.Add(item, false);
         }
 
+        Debug.Log("Init Item to Collect Dictionary: Succses");
+        Debug.Log(itemsToCollect);
     }
 
     public static void FinishLevel()
@@ -61,13 +65,17 @@ public  class GameLogic: MonoBehaviour
     {
         try
         {
-            itemsCollect[itemName] = true;
-            Debug.Log("list coolect: "+ itemName);
+            if (!itemsToCollect[itemName])
+            {
+                itemsToCollect[itemName] = true;
+                Debug.Log("list coolect: " + itemName);
+            }
 
             return true;
         }
         catch (KeyNotFoundException)
         {
+            Debug.Log("Failed to collect: " + itemName);
             return false;
         }
     }
