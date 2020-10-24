@@ -76,7 +76,6 @@ public class PlayerControls : MonoBehaviour
             handR.SetActive(true);
 
         }
-        Debug.Log(rot_z % 90);
 
         lantern.transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
  
