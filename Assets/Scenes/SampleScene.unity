@@ -265,6 +265,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95b1f1bf40b8cc345b938c96b0d19ebb, type: 3}
+--- !u!1 &364219647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8548685859852011526, guid: a646e915bdc45594bb1f0158c548c2cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 604712704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &383119927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -578,6 +584,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2771663294372427810, guid: a646e915bdc45594bb1f0158c548c2cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771663294372427810, guid: a646e915bdc45594bb1f0158c548c2cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4881874173235914246, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
       propertyPath: m_IsActive
@@ -1142,7 +1158,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Spider
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 0}]
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 16314b29b63e82b489564867b023a513, type: 3}
 --- !u!1 &1289861676
 GameObject:
@@ -2574,7 +2591,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Ui
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 364219647}
     - target: {fileID: 8064727543292908647, guid: a906c37bbfe1ba248be0e9772845bf08,
         type: 3}
       propertyPath: mm1
@@ -2597,6 +2614,11 @@ PrefabInstance:
     - target: {fileID: 7528816646682929029, guid: 8bafd238424343046a3fe02ed352aa5d,
         type: 3}
       propertyPath: m_Name
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528816646682929029, guid: 8bafd238424343046a3fe02ed352aa5d,
+        type: 3}
+      propertyPath: m_TagString
       value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 7528816646682929032, guid: 8bafd238424343046a3fe02ed352aa5d,

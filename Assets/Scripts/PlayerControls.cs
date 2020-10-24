@@ -13,8 +13,6 @@ public class PlayerControls : MonoBehaviour
     public GameObject Sprite_black;
     public GameObject Sprite_color;
 	public GameObject SanityMeter;
-	public GameObject mm1;
-	public GameObject mm2;
     private SpriteRenderer black_render;
     private SpriteRenderer color_renderer;
 	private bool MapEnabled;
@@ -122,5 +120,14 @@ public class PlayerControls : MonoBehaviour
 			GameObject.FindGameObjectWithTag("Minimap").GetComponent<MinimapShow>().SwitchVisibility();
 		}
 		
+	}
+	
+	public void Compass()
+	{
+		GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
+		Vector2 exitPoint =  new Vector2(GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.x, GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.y);
+		Vector2 playerPoint = new Vector2(transform.position.x, transform.position.y);
+		Debug.Log(Vector2.Angle(exitPoint, playerPoint));
+	
 	}
 }

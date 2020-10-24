@@ -10,6 +10,7 @@ TagManager:
   - SanityMeter
   - MinimapCamera
   - Minimap
+  - Exit
   layers:
   - Default
   - TransparentFX
