@@ -6,10 +6,10 @@ public class Borders : MonoBehaviour
 {
     void OnTriggerEnter2D (Collider2D col)
 	{
-		float forceX = -(col.attachedRigidbody.position.x)/Mathf.Abs(col.attachedRigidbody.position.x);
-		float forceY = -(col.attachedRigidbody.position.y)/Mathf.Abs(col.attachedRigidbody.position.y);
-		Vector2 force = new Vector2 (forceX*5000, forceY*5000);
-		col.attachedRigidbody.AddForce(force); 
-		Debug.Log("border reached");
+		if (col.gameObject.tag == "Player")
+			{
+				col.gameObject.transform.position = new Vector3(-col.gameObject.transform.position.x*0.9f, -col.gameObject.transform.position.y*0.9f, col.gameObject.transform.position.z);
+				Debug.Log("border reached");
+			}
 	}
 }
