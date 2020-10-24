@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 1665156973488995945, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 40
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1665156973488995945, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 4881874173235914246, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4903548362682373471, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
@@ -288,6 +288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Compass
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257916207920765857, guid: a646e915bdc45594bb1f0158c548c2cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6287762087426446563, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
@@ -327,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 8548685859852011526, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
       propertyPath: m_Name
-      value: UI
+      value: UI V1
       objectReference: {fileID: 0}
     - target: {fileID: 8548685859852011526, guid: a646e915bdc45594bb1f0158c548c2cf,
         type: 3}
