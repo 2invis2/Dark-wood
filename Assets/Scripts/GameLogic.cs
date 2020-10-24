@@ -9,10 +9,15 @@ public  class GameLogic: MonoBehaviour
 
     private static bool isExitAvilable = false;
 
+    public AudioClip backMusic;
+    private AudioSource audio;
 
     public void Start()
     {
+        audio = GetComponent<AudioSource>();
+        audio.PlayOneShot(backMusic);
         TestInit();
+        
     }
 
     //Временная ручная инициализация списка предметов

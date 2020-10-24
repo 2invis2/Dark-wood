@@ -18,15 +18,20 @@ public class PlayerControls : MonoBehaviour
     public GameObject handR;
     public GameObject handL;
 
+    private AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
+
 		//rb = GetComponent <Rigidbody2D> ();
     }
 
     private void OnEnable()
     {
-        rb = GetComponent<Rigidbody2D>();
+        audio = GetComponent<AudioSource>();
+        audio.Play();
+rb = GetComponent<Rigidbody2D>();
         black_render = Sprite_black.GetComponent<SpriteRenderer>();
         color_renderer = Sprite_color.GetComponent<SpriteRenderer>();
     }
@@ -42,13 +47,25 @@ public class PlayerControls : MonoBehaviour
         LanternRotation();
 
     }
-	
-	public void Moving()
-	{
-		float axisX = Input.GetAxis ("Horizontal");
-		float axisY = Input.GetAxis ("Vertical");
-		rb.velocity = new Vector2 (axisX*speed, axisY*speed);	
-	}
+
+    public void Moving()
+    {
+        float axisX = Input.GetAxis("Horizontal");
+        float axisY = Input.GetAxis("Vertical");
+        rb.velocity = new Vector2(axisX * speed, axisY * speed);
+
+        if((axisX !=0) || (axisY != 0))
+        {
+            if (!audio.isPlaying)
+            {
+                audio.Play();
+            }
+        }
+        else
+        {
+            audio.Pause();
+        }
+    }
 	
 	public void LanternRotation()
 	{
