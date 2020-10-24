@@ -13,8 +13,11 @@ public class PlayerControls : MonoBehaviour
     public GameObject Sprite_black;
     public GameObject Sprite_color;
 	public GameObject SanityMeter;
+	public GameObject mm1;
+	public GameObject mm2;
     private SpriteRenderer black_render;
     private SpriteRenderer color_renderer;
+	private bool MapEnabled;
 
     public GameObject handR;
     public GameObject handL;
@@ -32,7 +35,8 @@ public class PlayerControls : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
         audio.Play();
-rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();
+		MapEnabled = false;
         black_render = Sprite_black.GetComponent<SpriteRenderer>();
         color_renderer = Sprite_color.GetComponent<SpriteRenderer>();
     }
@@ -40,6 +44,7 @@ rb = GetComponent<Rigidbody2D>();
     void Update()
     {
         Moving();
+		Minimap();
     }
 	
 	void FixedUpdate()
@@ -107,6 +112,31 @@ rb = GetComponent<Rigidbody2D>();
 		sanity--;
 		SanityMeter.SendMessage("UpdateSanity", sanity);
 		if (sanity == 0) Ui.GetComponent<EndGame>().GameOver("Sanity is gone");
+		
+	}
+	
+	public void Minimap()
+	{
+		if (Input.GetKeyDown("m"))
+		{
+			if (MapEnabled)
+			{
+				MapEnabled = false;
+				mm1.SetActive(false);
+				mm2.SetActive(false);
+				
+				
+			}
+			else
+			{
+				MapEnabled = true;
+				mm1.SetActive(true);
+				mm2.SetActive(true);
+			}
+			
+			
+			
+		}
 		
 	}
 }
