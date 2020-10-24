@@ -19,7 +19,7 @@ public class LootPickUp : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D col)
     {
 		if (col.name == "Player")
-			Debug.Log(gameObject.name + " collected");
+			Debug.Log(gameObject.tag + " collected");
 		Destroy(this.gameObject);
 			
 	}

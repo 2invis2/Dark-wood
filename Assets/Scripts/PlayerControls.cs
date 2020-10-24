@@ -22,6 +22,7 @@ public class PlayerControls : MonoBehaviour
 	void FixedUpdate()
 	{
 		Moving();
+		Flashlight();
 	}
 	
 	public void Moving()
@@ -29,5 +30,13 @@ public class PlayerControls : MonoBehaviour
 		float axisX = Input.GetAxis ("Horizontal");
 		float axisY = Input.GetAxis ("Vertical");
 		rb.velocity = new Vector2 (axisX*speed, axisY*speed);	
+	}
+	
+	public void Flashlight()
+	{
+		Vector3 mouse = Input.mousePosition;
+		Vector3 lightPoint = Camera.main.ScreenToWorldPoint(mouse);
+		Debug.Log(lightPoint);
+
 	}
 }
