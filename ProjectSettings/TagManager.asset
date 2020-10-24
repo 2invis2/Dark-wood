@@ -12,6 +12,7 @@ TagManager:
   - Minimap
   - Exit
   - Compass
+  - Item
   layers:
   - Default
   - TransparentFX

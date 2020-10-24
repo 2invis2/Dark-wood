@@ -419,6 +419,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoA_Compass
       objectReference: {fileID: 0}
+    - target: {fileID: 5747269415663752706, guid: 0fa015c720911f3499a31fde35e3644b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fa015c720911f3499a31fde35e3644b, type: 3}
 --- !u!4 &86543077 stripped
@@ -2600,6 +2605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoA_Keys
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799654993633844843, guid: a8a5a36b04c869649a4d3940dd31211b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8a5a36b04c869649a4d3940dd31211b, type: 3}
@@ -11563,6 +11573,11 @@ PrefabInstance:
       propertyPath: SanityMeter
       value: 
       objectReference: {fileID: 1761602418}
+    - target: {fileID: 8238762164085893699, guid: a906c37bbfe1ba248be0e9772845bf08,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a906c37bbfe1ba248be0e9772845bf08, type: 3}
 --- !u!4 &1882039909 stripped

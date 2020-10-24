@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
         Moving();
 		Minimap();
 		Compass();
-		Debug.Log(compassAngle);
+		//Debug.Log(compassAngle);
     }
 	
 	void FixedUpdate()
