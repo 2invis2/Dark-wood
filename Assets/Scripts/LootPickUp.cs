@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LootPickUp : MonoBehaviour
 {
+    public string itemName;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,10 @@ public class LootPickUp : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            Debug.Log(gameObject.tag + " collected");
+            Debug.Log(itemName + " collected");
+            GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);
         }
 			
