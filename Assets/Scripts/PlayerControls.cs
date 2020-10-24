@@ -88,6 +88,8 @@ public class PlayerControls : MonoBehaviour
 		Debug.Log("Sanity decreased");
 		sanity--;
 		SanityMeter.SendMessage("UpdateSanity", sanity);
+		if (sanity == 0)
+			GameLogic.FailedLevel("Sanity is gone");
 		
 	}
 }

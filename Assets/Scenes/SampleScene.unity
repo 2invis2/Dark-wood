@@ -2361,6 +2361,11 @@ PrefabInstance:
       propertyPath: SanityMeter
       value: 
       objectReference: {fileID: 2104915477}
+    - target: {fileID: 8064727543292908647, guid: a906c37bbfe1ba248be0e9772845bf08,
+        type: 3}
+      propertyPath: sanity
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a906c37bbfe1ba248be0e9772845bf08, type: 3}
 --- !u!1001 &7187310844327755444
