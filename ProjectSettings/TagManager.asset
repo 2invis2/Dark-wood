@@ -9,6 +9,7 @@ TagManager:
   - Timer
   - SanityMeter
   - MinimapCamera
+  - Minimap
   layers:
   - Default
   - TransparentFX

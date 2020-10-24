@@ -118,24 +118,8 @@ public class PlayerControls : MonoBehaviour
 	public void Minimap()
 	{
 		if (Input.GetKeyDown("m"))
-		{
-			if (MapEnabled)
-			{
-				MapEnabled = false;
-				mm1.SetActive(false);
-				mm2.SetActive(false);
-				
-				
-			}
-			else
-			{
-				MapEnabled = true;
-				mm1.SetActive(true);
-				mm2.SetActive(true);
-			}
-			
-			
-			
+		{		
+			GameObject.FindGameObjectWithTag("Minimap").GetComponent<MinimapShow>().SwitchVisibility();
 		}
 		
 	}
