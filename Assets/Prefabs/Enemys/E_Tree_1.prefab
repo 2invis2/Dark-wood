@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 861319090327947057, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
       propertyPath: m_Name
-      value: E_Compass
+      value: E_Tree_1
       objectReference: {fileID: 0}
     - target: {fileID: 861319090327947059, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
@@ -103,5 +103,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4ee26f97ce209c74b8047bcca1563dbd,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: bea645e201a0c14418c87fc3107f10ed, type: 3}
