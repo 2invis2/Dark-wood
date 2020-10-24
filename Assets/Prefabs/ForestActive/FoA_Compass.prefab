@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1075035147246563509, guid: 5afb938ce17139e4dbdd23d93cf589bd,
         type: 3}
       propertyPath: itemName
-      value: Compass
+      value: "\u041A\u043E\u043C\u043F\u0430\u0441"
       objectReference: {fileID: 0}
     - target: {fileID: 3189614403013674667, guid: 5afb938ce17139e4dbdd23d93cf589bd,
         type: 3}

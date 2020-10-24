@@ -34,7 +34,7 @@ public class GameLogic: MonoBehaviour
         audio.PlayOneShot(backMusic);
 
         InitDictionary();
-        TestInit();
+        InitGameLogic();
         InitQuestList();
         //window = GameObject.Find("BlackWindow");
         damageTime = Time.time;
@@ -81,12 +81,17 @@ public class GameLogic: MonoBehaviour
         
     }
     //Временная ручная инициализация списка предметов
-    public static void TestInit()
+    //Теперь основная
+    public static void InitGameLogic()
     {
 
         List<string> items = new List<string>();
-        items.Add("Keys");
-        items.Add("Compass");
+        items.Add("Куртка");
+        items.Add("Компас");
+        items.Add("Подзорная труба");
+        items.Add("Батарейки");
+        items.Add("Ключи от машины");
+
         InitItemList(items);
 
     }
