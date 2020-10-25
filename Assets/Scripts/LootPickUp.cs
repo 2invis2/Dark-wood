@@ -33,7 +33,7 @@ public class LootPickUp : MonoBehaviour
             GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);
 			if (itemName == "Компас")
-				GameObject.FindGameObjectWithTag("Compass").GetComponent<Transform>().position = new Vector3(100, 100, 0);
+				GameObject.FindGameObjectWithTag("Compass").GetComponent<RectTransform>().localScale = new Vector3(100, 100, 1);
         }
 			
 	}
