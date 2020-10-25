@@ -860,6 +860,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1889788546}
     m_Modifications:
+    - target: {fileID: 5112711694735133083, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -398416357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112711694735133083, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b30e879b965e3a449aa0a4f7e673d7d,
+        type: 3}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -398416357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634038827241171899, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182649265784505870, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182649265784505870, guid: eea90fbcbf39195419884eb2bd0a5a80,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117694331687302969, guid: eea90fbcbf39195419884eb2bd0a5a80,
         type: 3}
       propertyPath: m_Name
