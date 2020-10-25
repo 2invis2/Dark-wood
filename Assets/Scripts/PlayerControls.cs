@@ -143,7 +143,7 @@ public class PlayerControls : MonoBehaviour
 	{
 		GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>();
 		Vector2 exitPoint =  new Vector2(GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.x - transform.position.x, GameObject.FindGameObjectWithTag("Exit").GetComponent<Transform>().position.y - transform.position.y);
-		compassAngle = (Vector2.Angle(exitPoint, Vector2.down) * exitPoint.x/Mathf.Abs(exitPoint.x))+180;
+		compassAngle = (Vector2.Angle(exitPoint, Vector2.down) * exitPoint.x/Mathf.Abs(exitPoint.x));
 		GameObject.FindGameObjectWithTag("Compass").GetComponent<CompassRotate>().ChangeDirection(compassAngle);	
 	}
 }
