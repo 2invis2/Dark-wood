@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Hands
       objectReference: {fileID: 0}
+    - target: {fileID: 861319090327947058, guid: bea645e201a0c14418c87fc3107f10ed,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 861319090327947058, guid: bea645e201a0c14418c87fc3107f10ed,
+        type: 3}
+      propertyPath: chaseDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 861319090327947059, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,12 +90,12 @@ PrefabInstance:
     - target: {fileID: 2355845816708019718, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2355845816708019718, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3713371529656842643, guid: bea645e201a0c14418c87fc3107f10ed,
         type: 3}
