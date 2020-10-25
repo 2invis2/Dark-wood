@@ -28,7 +28,6 @@ public class EnemyControls : MonoBehaviour
     {
 		if (isActive)
 		{
-			moveToPlayer();
 			if (!offSight)
 			{
 				animator.SetInteger("State", (int)CharState.Move);
@@ -37,7 +36,7 @@ public class EnemyControls : MonoBehaviour
             {
 				animator.SetInteger("State", (int)CharState.MoveShadow);
 			}
-
+			moveToPlayer();
 		}
 
 		distanceToPlayer = Vector3.Magnitude(transform.position - target.position);
@@ -96,6 +95,6 @@ public class EnemyControls : MonoBehaviour
 public enum CharState
 {
 	Shadow,
-	Move,
-	MoveShadow
+	MoveShadow,
+	Move
 }
