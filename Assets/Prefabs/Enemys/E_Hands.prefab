@@ -99,5 +99,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5663f411c5f87d0428da5fc999e5ae9d,
         type: 3}
+    - target: {fileID: 4459321458129753473, guid: bea645e201a0c14418c87fc3107f10ed,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4c0414d6c307d3a41a91eb8810696e5f, type: 2}
+    - target: {fileID: 4648030708212275811, guid: bea645e201a0c14418c87fc3107f10ed,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8fa781889714a9f47bdca2f85f6902e2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea645e201a0c14418c87fc3107f10ed, type: 3}
