@@ -32,7 +32,7 @@ public class LootPickUp : MonoBehaviour
             audio.PlayOneShot(pickUp);
             GameLogic.CollectItem(itemName);
             Destroy(this.gameObject);
-			if (itemName == "Compass")
+			if (itemName == "Компас")
 				GameObject.FindGameObjectWithTag("Compass").GetComponent<Transform>().position = new Vector3(100, 100, 0);
         }
 			
